@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 // Initialize Swiper
 const swiper = new Swiper('.swiper-container', {
     loop: true,
