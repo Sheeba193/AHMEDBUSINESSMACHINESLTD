@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --white:#ffffff;
+    --ink: #000000;
+    --border-color:rgb(229, 231, 235);
+    --greyish: #f0f2f3;
+    --grey: rgb(229, 231, 235);
+    --logo-blue:#02adee;
+    --logo-pink: #ee008b;
+    --logo-yellow: #fef200;
+    --nav-red:#cb4154;
+    --dark-red: #970015;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* General Reset */
+
+/* Mobile Design (Default) */
+
+/* Navbar styles */
+nav{
+    width: 100%;
+    /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1); /* Soft shadow to lift navbar */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); Light border for lifted effect */ 
+}
+.navbar {
+    position: absolute; /* Overlay the slider */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent; /* Slightly transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a lifted look */
+    z-index: 10;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Sidebar for Mobile View */
+.sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: fit-content;
+    background-color: var(--greyish);
+    margin-top: 100px;
+    transition: transform 0.3s ease;
+}
+
+/* When sidebar is open */
+.sidebar-open {
+    display: flex;
+    transform: translateX(0);
+}
+
+/* Sidebar Links */
+.sidebar .nav-links {
+    flex-direction: column;
+    list-style: none;
+    color: var(--ink);
+}
+.sidebar .nav-links ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: var(--ink);
+}
+
+.sidebar .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+    color: var(--ink);
+
+}
+.sidebar ul li{
+    list-style: none;
+    color: var(--ink);
+}
+.sidebar ul li a{
+    list-style: none;
+    color: var(--ink);
+}
+
+
+.sidebar .dropdown .dropdown-content {
+    display: none;
+    background-color: var(--greyish);
+
+}
+.sidebar .dropdown a{
+    text-decoration: none;
+}
+.sidebar .dropdown a .dropdown-content ul li{
+    list-style: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+.dropdown-content ul li{
+    list-style: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+.sidebar .dropdown a .dropdown-content ul li a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+}
+.dropdown-content ul li a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Adjust dropdown styling for larger screens */
+.navbar .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+/* Menu and Close Toggle Buttons */
+.menu-toggle, .close-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+/* Hide Close Button by Default */
+.close-toggle {
+    display: none;
+}
+.sidebar .register-btn{
+    padding: 8px 16px;
+    background-color: var(--nav-red);
+    color: var(--white);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--nav-red);
+    cursor: pointer;
+}
+.sidebar .register-btn:hover{
+    background-color: var(--dark-red);
+}
+
+/* Header - Hidden on Mobile */
+.header {
+    display: none;
+}
+.desktop-nav{
+    display: none;
+}
+/* Quote container styling */
+.quote-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--ink);
+    z-index: 5;
+}
+
+.quote-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-red);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: -200px;
+}
+
+
+/* Swiper Slider Styling */
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    object-position: center;
+}
+
+/* Buttons for Swiper */
+.swiper-pagination{
+    color: var(--ink);
+    height: 24px;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--ink);
+}
+
+/* Tablet Design (min-width: 760px) */
+@media (min-width: 760px) {
+    
+    .sidebar {
+        width: 200px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .quote-container h1{
+        width: 80%;
+    }
+}
+
+/* Larger Screens (min-width: 1000px) */
+@media (min-width: 1000px) {
+    /* Display header */
+    .header{
+        display: flex;
+        padding: 10px 20px;
+        width: 100%;  
+        z-index: 6;
+    }
+    .header ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .header ul li{
+        font-size: 12px;
+        list-style: none;
+        color: var(--ink);
+        text-align: center;
+        cursor: pointer;
+    }
+    .header a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .header img{
+        height: 18px;
+        width: 18px;
+    }
+    .contact-icons{
+        display: flex;
+        column-gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .contact-icons li{
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .social-media{
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .social-media li{
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .social-media span{
+        display: none;
+    }
+    .navbar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        z-index: 2;
+        padding-top: 80px;
+        border: none;
+        
+    }
+    .logo{
+        width: 20%;
+    }
+    .logo img{
+        width: 100%;
+        height: 80px;
+    }
+    
+    /* Show Desktop Navigation */
+    .desktop-nav {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .desktop-nav li{
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0px;
+        text-align: center;  
+        padding: 0;
+        cursor: pointer;
+    }
+    .desktop-nav li a{
+        padding: 2px;
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn{
+        padding: 8px 8px;
+        background-color: var(--nav-red);
+        color: var(--white);
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid var(--nav-red);
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn:hover{
+        background-color: var(--dark-red);
+}
+
+    /* Hide Mobile Menu Toggle and Sidebar on Larger Screens */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Hide sidebar, menu, and close toggle on large screens */
+    .sidebar {
+        display: none;
+    }
+    .navbar .menu-toggle{
+        display: none;
+    }
+    
+
+    /* Navbar links in flex layout for larger screens */
+    .desktop-nav {
+        display: flex;
+        list-style: none;
+    }
+
+    .desktop-nav li {
+        margin-right: 15px;
+        margin-left: 10px;
+        position: relative;
+    }
+    
+    .desktop-nav li a {
+        text-decoration: none;
+        color: var(--ink);
+        padding: 12px 8px;
+        transition: background 0.3s ease;
+    }
+    
+    .desktop-nav li a:hover {
+        background: var(--nav-red);
+        border-radius: 5px;
+        padding: 10px 18px;
+    }
+    
+    /* Dropdown Menu for Desktop View */
+    .desktop-nav .dropdown-content {
+        display: none;
+        position: absolute;
+        background: var(--nav-red);
+        padding: 10px;
+        list-style: none;
+        top: 100%; /* Position below the dropdown-toggle */
+        left: 0;
+        border-radius: 5px;
+        width: 100%;
+        z-index: 20; /* Higher z-index to ensure it appears above the main-container */
+    
+        /* max-height: 200px; Set a maximum height to prevent overflow */
+    }
+    
+    .desktop-nav .dropdown:hover .dropdown-content {
+      display: block; /* Show dropdown on hover */
+    }
+    
+    .desktop-nav .dropdown-content li {
+        margin: 5px 0;
+        padding: 2px 10px;
+        width: 100%;
+    }
+    
+    .desktop-nav .dropdown-content li a {
+       
+        display: block;
+    }
+    
+    .desktop-nav .dropdown-content li a:hover {
+        background: var(--lilac);
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    /* Dropdown menu in desktop view */
+    .dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #666;
+        min-width: 150px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #777;
+    }
+    /* Show dropdown on hover for larger screens only */
+
+    .navbar .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
