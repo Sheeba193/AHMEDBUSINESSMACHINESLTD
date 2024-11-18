@@ -355,7 +355,7 @@ nav{
     width: 100%;
     background-color: var(--dark-red);
     background-position: center;
-    padding: 20px 10px;
+    padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -698,7 +698,8 @@ footer a{
         width: 40%;
     }
     .footerlogo img{
-        width: 70%;
+        width:50%;
+        height: 40%;
     }
     .about{
         width: 30%;
@@ -800,7 +801,7 @@ footer a{
     }
 
     .desktop-nav li{
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 600;
         margin: 0px;
         text-align: center;  
@@ -914,9 +915,192 @@ footer a{
         display: block;
     }
 
-
+    .products-container{
+        align-items: center;
+        padding: 30px 20px;
+    }
+    .products-container h6{
+        font-size: 20px;
+    }
+    .products-container h3{
+        font-size: 32px;
+    }
     .product-items ul{
         flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
     }
+    .product-items ul li{
+        flex: 1 1 calc(33.333% - 10%);
+        max-width: calc(3333.333% - 10%);
+        box-sizing: border-box;
+    }
+    .product-items h4{
+        font-size: 22px;
+    }
+    
+    .contact-us-banner h3{
+        font-size: 32px;
+    }
+    .location h6{
+        font-size: 20px;
+    }
+    .location-card{
+        padding: 30px 40px;
+    }
+    .location-card h4{
+        font-size: 22px;
+    }
+    .location-card p{
+        font-size: 16px;
+    }
+    .contact-us-form h6{
+        font-size: 20px;
+    }
+    .form-card{
+        padding: 30px 40px;
+        font-size: 16px;
+    }
+    .form-card h4{
+        font-size: 22px;
+    }
+    .form-card p{
+        font-size: 16px;
+    }
+    #submit-btn{
+        font-size: 18px;
+        width: 30%;
+    }
+    .links-container{
+        padding: 30px 40px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .footerlogo img{
+        display: block;
+    }
+    .about{
+        justify-content: flex-start;
+        margin: 0px;
+    }
+    .about h3{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .about ul li{
+        font-size: 14px;
+    }
+    .quicklinks{
+        justify-content: flex-start;
+        margin: 0px;
+    }
+    .quicklinks h3{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .quicklinks ul li{
+        font-size: 14px;
+    }
+    footer ul li{
+        font-size: 14px;
+        font-weight: 600;;
+    }
+
+}
+@media (min-width: 1400px) {
+    .header{
+        padding: 20px;
+    }
+    .header ul li{
+        font-size: 16px;
+    }
+    .header img{
+        height: 20px;
+        width: 20px;
+    }
+    .social-media{
+        column-gap: 20px;
+    }
+    .navbar{
+        width: 100%;
+        margin: 0px auto;
+        column-gap: 10%;
+        box-shadow: none;
+    }
+    .logo{
+        width: 30%;
+    }
+    .logo img{
+        height: 160px;
+    }
+    .desktop-nav li{
+        font-size: 24px;
+    }
+    .desktop-nav .register-btn{
+        padding:12px 8px;
+        font-size: 18px;
+    }
+    .location-and-forms{
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+        margin: auto;
+        gap: 30%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .location-card{
+        padding: 40px 60px ;
+        width: 160%;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Initial lifted effect */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    
+    }
+    .location-card:hover {
+        transform: translateY(-20px); /* Increase lift effect on hover */
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow when hovered */
+    }
+    
+    .location-card p{
+        margin-bottom: 48px;
+        
+    }
+    .form-card{
+        width: 80%;
+        padding: 30px 60px ;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Initial lifted effect */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    
+    }
+    .form-card:hover {
+        transform: translateY(-20px); /* Increase lift effect on hover */
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow when hovered */
+    }
+    
+   
+    
+    .about{
+        margin-top: 20px;
+    }
+    .about h3{
+        font-size: 18px;
+    }
+    .about ul li{
+        font-size: 16px;
+    }
+    .quicklinks{
+        margin-top: 20px;
+    }
+    .quicklinks h3{
+        font-size: 18px;
+    }
+    .quicklinks ul li{
+        font-size: 16px;
+    }
+
 }
 
