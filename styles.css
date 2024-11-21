@@ -33,7 +33,7 @@ html{
 }
 
 body {
-    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: var(--ink);
@@ -76,13 +76,12 @@ nav {
 
 .nav-links {
     display: none;
-    flex-direction: column;
-    background-color: #f0f0f0;
+    /* flex-direction: column; */
+    background-color: transparent;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 300px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
 }
@@ -102,6 +101,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
+    text-align: center;
     color: var(--ink);
 }
 
@@ -139,7 +139,7 @@ nav {
     right: 0;
     /* height: 300px; */
     width: 280px;
-    background-color: #f0f0f0;
+    background-color: var(--greyish);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 999;
@@ -157,13 +157,16 @@ nav {
 
 .sidebar-nav li {
     padding: 16px 0;
-    border-bottom: 0.5px solid var(--ink) ;
+    border-bottom: 3px solid var(--white) ;
 }
 .sidebar-nav li a{
     text-decoration: none;
     text-align: center;
     color: var(--ink);
     font-size: 20px;
+}
+.sidebar-nav li a:hover{
+    text-decoration: underline;
 }
 .dropdown-menu{
     left: 30px;
@@ -197,6 +200,10 @@ nav {
     box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid var(--nav-red);
+    cursor: pointer;
+}
+#register-warranty a button:hover{
+    background-color: var(--dark-red);
 }
 
 
@@ -644,10 +651,21 @@ body {
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
-
+    nav{
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .logo{
+        width: 10%;
+    }
+    .logo img{
+        width: 100px;
+    }
     .nav-links {
         display: flex;
         flex-direction: row;
+        align-items: center;
         position: static;
         background-color: transparent;
         height: auto;
@@ -656,7 +674,54 @@ body {
     }
 
     .nav-links li {
-        padding: 10px 20px;
+        padding: 10px 8px;
+    }
+    .nav-links li a{
+        font-size: 16px;
+        text-align: center;
+    }
+    .nav-links li a:hover{
+        background-color: var(--nav-red);
+        padding: 8px 16px;
+        color: var(--white);
+    }
+    .nav-links li:last-child{
+        display:block;
+    }
+    .nav-links li:last-child a{
+        text-decoration: none;
+        color: var(--white);
+    
+    }
+    .nav-links li:last-child a button{
+        background-color: var(--nav-red);
+        color: var(--white);
+        font-size: 16px;
+        padding: 6px 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid var(--nav-red);    
+        cursor: pointer;
+    }
+    #register-warranty a button:hover{
+        background-color: var(--dark-red);
+    }
+    .dropdown-menu{
+        left: 10px;
+        width: 200px;
+        padding: 8px 10px;
+    }
+    .dropdown-menu li{
+        padding: 6px 16px
+    }
+    .dropdown-menu li a:hover{
+        background-color: var(--nav-red);
+        padding: 8px 16px;
+        color: var(--white);
+        left: 0;
+    }
+    .dropdown-menu li:last-child{
+        color: var(--ink);
     }
 
     .burger {
@@ -767,6 +832,38 @@ body {
     .header img{
         height: 18px;
         width: 18px;
+    }
+    header{
+        width: 100%;
+        top: 40px;
+    }
+    nav{
+        width: 95%;
+        margin: 0px
+    }
+    .logo{
+        width: 20%;
+    }
+    .logo a img{
+        width: 180px;
+    }
+    .nav-links{
+        width: 80%;
+        justify-content: flex-end;
+        column-gap: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .nav-links li {
+        padding: 10px;
+    }
+    .nav-links li a{
+        font-size: 20px;
+    }
+    .nav-links li:last-child a button{
+        font-size: 18px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
     .contact-icons{
         display: flex;
@@ -905,27 +1002,39 @@ body {
     .social-media{
         column-gap: 20px;
     }
-    .navbar{
+    header{
+        top: 80px;
+    }
+    nav{
+        width: 90%;
+        margin: auto;
+    }
+    .logo a img{
         width: 100%;
-        margin: 0px auto;
-        column-gap: 10%;
-        box-shadow: none;
+        height: 180px;
     }
-    .logo{
-        width: 30%;
+    .nav-links{
+        justify-content: center;
+        column-gap: 30px;
     }
-    .logo img{
-        height: 160px;
+    .nav-links li{
+        padding: 10px 16px;
     }
-    .desktop-nav li{
-        font-size: 24px;
+    .nav-links li a {
+        font-size: 28px;
     }
-    .desktop-nav .register-btn{
-        padding:12px 8px;
-        font-size: 18px;
+    .nav-links li:last-child a button{
+        margin-left: 10px;
+        font-size: 22px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .dropdown-menu{
+        width: 260px;
+        height: fit-content;
     }
     .location-and-forms{
-        flex-direction: row;
+        /* flex-direction: row; */
         justify-content: center;
         width: 70%;
         margin: auto;
@@ -934,8 +1043,9 @@ body {
         padding-bottom: 60px;
     }
     .location-card{
-        padding: 4px 60px ;
-        width: 210%;
+        padding: 12px 60px ;
+        margin-bottom: 30px;
+        width: 100%;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Initial lifted effect */
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
     
