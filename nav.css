@@ -1,0 +1,176 @@
+/* General Reset */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --white:#ffffff;
+    --ink: #000000;
+    --border-color:rgb(229, 231, 235);
+    --greyish: #f0f2f3;
+    --grey: rgb(229, 231, 235);
+    --logo-blue:#02adee;
+    --logo-pink: #ee008b;
+    --logo-yellow: #fef200;
+    --nav-red:#cb4154;
+    --dark-red: #970015;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--ink);
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Mobile-first Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: transparent;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.sidebar-open {
+    transform: translateX(0);
+}
+
+.sidebar .nav-links {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle,
+.close-toggle {
+    display: inline-block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.close-toggle {
+    align-self: flex-end;
+    margin-top: -10px;
+}
+
+/* Register Button Styling */
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Larger Screen Styles */
+@media (min-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .menu-toggle,
+    .close-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        color: black;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .register-btn {
+        margin: 0;
+    }
+}

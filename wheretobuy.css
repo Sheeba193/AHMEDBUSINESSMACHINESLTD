@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --white:#ffffff;
+    --ink: #000000;
+    --border-color:rgb(229, 231, 235);
+    --greyish: #f0f2f3;
+    --grey: rgb(229, 231, 235);
+    --logo-blue:#02adee;
+    --logo-pink: #ee008b;
+    --logo-yellow: #fef200;
+    --nav-red:#cb4154;
+    --dark-red: #970015;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.where-to-buy-container {
+    padding: 30px 20px;
+    width: 100%;
+    z-index: 8;
+  }
+.where-to-buy-container h2{
+    color: var(--ink);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 10px;
+}
+.where-to-buy-container p{
+    color: var(--purple);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px;
+    background-color: transparent;
+}
+  
+.town-list {
+    list-style: none;
+    padding: 20px;
+    background-color: var(--lilac);
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px solid var(--lilac);
+}
+        
+.town-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.town-list li span {
+    display: inline-block;
+    width: 50%; /* Adjust width as needed */
+}
+ 
+.add-subtract-icon {
+    display: inline-block;
+    width: 10%; /* Adjust width as needed */
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.shop-list {
+    display: none; /* Initially hide shop lists */
+    list-style: none;
+    padding: 0;
+}
+
+.shop-list li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+/* Responsive Design for Larger Screens */
+/* TABLET DESIGN*/
+@media only screen and (min-width: 768px) {
+    .town-list{
+        width: 30%;
+    }
+    .where-to-buy-container p{
+        width: 80%;
+        margin: auto;
+    }
+}

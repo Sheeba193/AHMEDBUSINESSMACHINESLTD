@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>AHMED BUSINESS MACHINES LTD</title>
 </head>
@@ -33,79 +38,91 @@
     </div>
     <!--header ends-->
 
-    <!--nav starts-->
-    <!-- Navbar Container -->
-    <nav class="navbar">
-        <!-- Logo Section -->
-        <div class="logo">
-            <a href="index.html"><img src="./images/logo-188x188.png" alt="logo"></a>
-        </div>
-
-        <!-- Menu Button for Mobile View -->
-        <button class="menu-toggle" id="menu-toggle">
-            &#9776; <!-- Unicode for a hamburger menu icon -->
-        </button>
-        
-        <button class="close-toggle" type="close-toggle">
-            &#x2715; <!--Unicode for a close menu icon-->
-        </button>
-
-        <!-- Sidebar Navigation for Mobile View -->
-        <div class="sidebar sidebar-closed" id="sidebar">
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle"> Products&#x25BC;</a>
-                    <ul class="dropdown-content">
-                        <li><a href="one-function.html">Single Function</a></li>
-                        <li><a href="multi-function.html">Multi Function</a></li>
-                        <li><a href="phantumcolor.html">Fantum Color</a></li>
-                    </ul>
-                </li>
-                <li><a href="wheretobuy.html">Where to Buy</a></li>
-                <li><a href="servicing.html">Servicing</a></li>
-                <li><a href="support.html"> Support</a></li>
-                <li><a href="warranty-reg.html"><button class="register-btn"> Register Warranty</button></a></li>
-            </ul>
-        </div>
-
-        <!-- Navbar Links for Larger Screens -->
-        <ul class="nav-links desktop-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle"> Products&#x25BC;</a>
-                <ul class="dropdown-content">
-                    <li><a href="one-function.html">Single Function</a></li>
-                    <li><a href="multi-function.html">Multi Function</a></li>
-                    <li><a href="phantumcolor.html">Fantum Color</a></li>
-                </ul>
-            </li>
-            <li><a href="wheretobuy.html">Where to Buy</a></li>
-            <li><a href="servicing.html">Servicing</a></li>
-            <li><a href="support.html"> Support</a></li>
-            <li><a href="warranty-reg.html"><button class="register-btn"> Register Warranty</button></a></li>
-        </ul>
-    </nav>
-    <!-- Navbar ends -->
-
-    <div class="quote-container">
-        <h1>Your Number One Distributor of Pantum Printers in Kenya </h1>
-    </div>
-
     <!-- Swiper container starts -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="images/pantum-we-scaled.jpg" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="images/printers.jpg" alt="Slide 2"></div>
-            <div class="swiper-slide"><img src="images/pexels-photo-9574453.jpeg" alt="Slide 3"></div>
+            <div class="swiper-slide"><img src="images/pantum-web-nbanner.jpg" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="images/Pantum-web.jpg" alt="Slide 3"></div>
         </div>
         <!-- Pagination and navigation for Swiper -->
         <div class="swiper-pagination"></div>
         <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
+        <div class="quote-container">
+            <h1>Your Number One Distributor of Pantum Printers in Kenya </h1>
+        </div>
     </div>
     <!-- Swiper container ends -->
+     <!-- <div class="quote-container">
+        <h1>Your Number One Distributor of Pantum Printers in Kenya </h1>
+    </div> -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+
+    <!--nav starts-->
+    <!-- Navbar Container -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="./IMAGES/logo-188x188.png" alt="logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Products &#709;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Ricoh</a></li>
+                        <li><a href="#">Epson</a></li>
+                        <li><a href="#">Pantum</a></li>
+                        <li><a href="#">Kyocera</a></li>
+                        <li><a href="#">Konica Minolta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Where To Buy</a></li>
+                <li><a href="#">Servicing</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#" class ="register-warranty">
+                    <button>REGISTER WARRANTY</button>
+                </a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Products &#709;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Ricoh</a></li>
+                    <li><a href="#">Epson</a></li>
+                    <li><a href="#">Pantum</a></li>
+                    <li><a href="#">Kyocera</a></li>
+                    <li><a href="#">Konica Minolta</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Where To Buy</a></li>
+            <li><a href="#">Servicing</a></li>
+            <li><a href="#">Support</a></li>
+            <li id= "register-warranty"><a href="#">
+                <button>REGISTER WARRANTY</button>
+            </a></li>
+        </ul>
+    </div>
+
     <script src="script.js"></script>
+    <!-- Navbar ends -->
+
+    
+
+    
 
     <div class="products-container">
         <h6>PRODUCTS</h6>
