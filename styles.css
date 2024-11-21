@@ -994,6 +994,7 @@ body {
     }
     .header ul li{
         font-size: 16px;
+        font-weight: bold;
     }
     .header img{
         height: 20px;
