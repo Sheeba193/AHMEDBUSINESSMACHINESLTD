@@ -1,0 +1,152 @@
+.warranty-container{
+    width: 100%;
+    background: var(--white);
+    padding: 20px;
+    margin-top: 190px;
+    box-shadow: 8px var(--nav-red);
+}
+.warranty-container .text{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(right, #cb4154, transparent);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+.warranty-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.form-row{
+    /* display: flex; */
+    margin: 10px auto;
+    width: 90%;
+
+}
+.form-row .input-data{
+    width: 90%;
+    height: 60px;
+    margin: 0 20px;
+    position: relative;
+}
+.form-row .textarea{
+    height: 120px;
+}
+.input-data input,
+.textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid var(--nav-red);
+}
+.input-data input:focus::placeholder {
+    color: transparent; /* Hide placeholder on focus */
+}
+.textarea textarea:focus::placeholder {
+    color: transparent; /* Hide placeholder on focus */
+}
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label{
+    transform: translateY(-30px);
+    font-size: 14px;
+    color: var(--nav-red);
+    border: none;
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top: 10px;
+}
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: var(--white);
+}
+.textarea label:focus{
+    color: transparent;
+}
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--lilac);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+    border: none;
+}
+.submit-btn .input-data{
+    overflow: hidden;
+    height: 45px!important;
+    width: 25%!important;
+}
+.submit-btn .input-data .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #970015, transparent, #970015, #cb4154);
+    transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+    left: 0;
+}
+.submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+@media only screen and (min-width: 768px){
+    .warranty-container{
+        margin-top: 220px;
+    }
+    .warranty-container .text{
+        font-size: 30px;
+    }
+    .warranty-container form{
+        padding: 10px 0 0 0;
+    }
+    .form-row{
+        display: block;
+    }
+    .form-row .input-data{
+        margin: 35px 0!important;
+    }
+    .submit-btn .input-data{
+        width: 40%!important;
+    }
+}
