@@ -50,9 +50,7 @@ nav{
 .where-to-buy-container {
     padding: 30px 20px;
     width: 100%;
-    position: relative;
-    top: 230px;
-    bottom: 40px;
+    margin-top: 190px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
