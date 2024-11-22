@@ -615,6 +615,7 @@ nav {
 footer{
     padding: 10px 20px;
     background-color: var(--bg);
+    box-shadow: 5px 2px 0px 0 rgba(0,0,0,0.25);
 }
 footer ul{
     display: flex;
@@ -811,6 +812,7 @@ body {
         padding: 10px 20px;
         width: 100%;  
         z-index: 6;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
     }
     .header ul{
         display: flex;

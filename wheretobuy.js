@@ -1,29 +1,23 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const townLists = document.querySelectorAll('.town-list li');
-  
-//     townLists.forEach(townList => {
-//       const addSubtractButton = townList.querySelector('.add-subtract-icon');
-//       const shopList = townList.querySelector('.shop-list');
-  
-//       addSubtractButton.addEventListener('click', () => {
-//         shopList.classList.toggle('expanded');
-//         if (shopList.classList.contains('expanded')) {
-//           addSubtractButton.textContent = '-';
-//         } else {
-//           addSubtractButton.textContent = '+';
-//         }
-//       });
-//     });
-//   });
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-const expandButtons = document.querySelectorAll('.expand-button');
+accordionItemHeaders.forEach(accordionItemHeader =>{
+  accordionItemHeader.addEventListener("click", event => {
 
-expandButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const shopList = button.nextElementSibling;
-    shopList.classList.toggle('expanded');
-    
-    // Update button text based on expanded state
-    button.textContent = shopList.classList.contains('expanded') ? '-' : '+';
+    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!== accordionItemHeader){
+       currentlyActiveAccordionItemHeader.classList.toggle("active");
+       currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+    }
+
+    accordionItemHeader.classList.toggle("active");
+
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if (accordionItemHeader.classList.contains("active")){
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else{
+      accordionItemBody.style.maxHeight = 0;
+    }
   });
+
 });
