@@ -145,6 +145,10 @@ body {
 .ditz dt a{
     cursor: pointer;
     text-decoration: none;
+    color: var(--ink);
+}
+.ditz dt a:hover{
+    color: var(--nav-red);
 }
 .links-container{
     position: relative;
@@ -198,7 +202,7 @@ body {
     
     .products{
         width: 75%;
-        height: 50vh;
+        height: 70vh;
 
     }
     .products img{

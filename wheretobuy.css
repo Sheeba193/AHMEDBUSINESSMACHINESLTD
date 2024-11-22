@@ -138,6 +138,7 @@ nav{
     html{
         font-size: 14px;
     }
+    
 }
 @media(min-width : 767px){
     .accordion-item-header::after{
