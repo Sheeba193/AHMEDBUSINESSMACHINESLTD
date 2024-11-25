@@ -205,6 +205,27 @@ nav {
 #register-warranty a button:hover{
     background-color: var(--dark-red);
 }
+.sidebar .sidebar-nav li a #register-warranty{
+    display:block;
+}
+.sidebar .sidebar-nav li a #register-warranty {
+    text-decoration: none;
+    color: var(--white);
+
+}
+.sidebar .sidebar-nav li a #register-warranty  button{
+    background-color: var(--nav-red);
+    color: var(--white);
+    font-size: 16px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--nav-red);
+    cursor: pointer;
+}
+.sidebar .sidebar-nav li a #register-warranty  button:hover{
+    background-color: var(--dark-red);
+}
 
 
 
